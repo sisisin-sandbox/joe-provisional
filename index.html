@@ -2,6 +2,7 @@
 <html>
   
   <head>
+    		<meta charset="UTF-8"></meta>
     <style type="text/css">
       .tweet{
         border: 1px solid black;
@@ -27,18 +28,47 @@
           width:40px;
         height: 40px;
 }
+.open-reply{
+  text-align: right;
+}
     </style>
     <title>Hello World!</title>
   </head>
   
   <body>
     <h1>Hello World!</h1>We are using node.js
+    <div id="container"></div>
     <script>
-      document.write(process.version)
+      window.onload = function () {
+        require('babel/register')();
+        require('./main.jsx');
+      };
     </script>and atom-shell
     <script>
+
       document.write(process.versions['atom-shell'])
     </script>.
+    
+    <div class="buttons">
+      <div class="home">
+        <input type="button" value="home"></input>
+      </div>
+      <div class="reply">
+        <input type="button" value="@"></input>
+      </div>
+      <div class="DM">
+        <input type="button" value="DM"></input>
+      </div>
+      <div class="list">
+        <input type="button" value="list"></input>
+      </div>
+      <div class="search">
+        <input type="button" value="se"></input>
+      </div>
+      <div class="setting">
+        <input type="button" value="gear"></input>
+      </div>
+
     <div class="timeline">
       <div class="tweet">
         <div class="icon-area">
@@ -89,12 +119,15 @@
         <div class="tweet-child-area">
           <div class="tweet-child-header">
             <div class="tweet-child-icon-area">
-              <img class="child-icon" src="./img/ctgdU0a8.jpg"></img>
+              <a href="person.html" target="_blank">
+                <img class="child-icon" src="./img/ctgdU0a8.jpg"></img>
+              </a>
             </div>
             <div class="tweet-child-username">しめじ</div>
             <div class="tweet-child-userid">@Azsimeji</div>
           </div>
           <div class="tweet-child-text-area">@Azsimeji ホイ！</div>
+          <div class="open-reply">▼</div>
         </div>
       </div>
     </div>

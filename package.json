@@ -9,6 +9,9 @@
   "author": "sisisin",
   "license": "ISC",
   "devDependencies": {
-    "electron-prebuilt": "^0.26.1"
+    "babel": "^5.4.7",
+    "electron-prebuilt": "^0.26.1",
+    "react": "^0.13.3",
+    "twit": "^1.1.20"
   }
 }
